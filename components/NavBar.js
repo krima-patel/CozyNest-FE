@@ -29,6 +29,16 @@ export default function NavBar() {
             <Nav.Link>Pieces</Nav.Link>
           </Link>
         </Nav>
+        <Nav className="me-auto">
+          <Link passHref href="/rooms/new">
+            <Nav.Link>Add a Room</Nav.Link>
+          </Link>
+        </Nav>
+        <Nav className="me-auto">
+          <Link passHref href="/pieces/new">
+            <Nav.Link>Add a Piece</Nav.Link>
+          </Link>
+        </Nav>
         <NavDropdown.Item>
           <button type="button" className="btn btn-sign-out" onClick={signOut}>
             Sign Out
