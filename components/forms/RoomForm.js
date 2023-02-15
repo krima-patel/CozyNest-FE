@@ -27,6 +27,7 @@ const RoomForm = ({ roomObj }) => {
 
   useEffect(() => {
     getAndSet();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roomObj]);
 
   const handleChange = (e) => {
