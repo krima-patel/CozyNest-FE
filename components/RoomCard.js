@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
+import Link from 'next/link';
 
 export default function RoomCard({
-  name, purpose, theme, mood, deadline,
+  id,
+  name,
+  purpose,
+  theme,
+  mood,
+  deadline,
 }) {
   return (
     <Card style={{ width: '18rem' }}>
@@ -13,14 +19,16 @@ export default function RoomCard({
         <Card.Text className="mb-2 text-muted">Theme of Room: {theme}</Card.Text>
         <Card.Text className="mb-2 text-muted">Ambience: {mood}</Card.Text>
         <Card.Subtitle className="product-date">Expected Completion date: {deadline}</Card.Subtitle>
-        <Card.Link href="#">Card Link</Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+        <Link href={`/rooms/edit/${id}`} passHref>
+          <Button className="room-btns">Update</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
 }
 
 RoomCard.propTypes = {
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,
   theme: PropTypes.string.isRequired,

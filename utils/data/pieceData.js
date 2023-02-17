@@ -19,8 +19,8 @@ const createPiece = (piece) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const updatePiece = (piece) => new Promise((resolve, reject) => {
-  fetch(`${clientCredentials.databaseURL}/pieces/${piece.id}`, {
+const updatePiece = (piece, id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/pieces/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -31,4 +31,15 @@ const updatePiece = (piece) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getAllPieces, createPiece, updatePiece };
+const getSinglePiece = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/pieces/${id}`)
+    .then((response) => resolve(response.json()))
+    .catch((error) => reject(error));
+});
+
+export {
+  getAllPieces,
+  createPiece,
+  updatePiece,
+  getSinglePiece,
+};

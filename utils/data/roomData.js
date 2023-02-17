@@ -31,4 +31,15 @@ const updateRoom = (room) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getAllRooms, createRoom, updateRoom };
+const getSingleRoom = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/rooms/${id}`)
+    .then((response) => resolve(response.json()))
+    .catch((error) => reject(error));
+});
+
+export {
+  getAllRooms,
+  createRoom,
+  updateRoom,
+  getSingleRoom,
+};
