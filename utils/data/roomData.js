@@ -1,4 +1,5 @@
 import { clientCredentials } from '../client';
+import { deletePiece, getPieceByRoom } from './pieceData';
 
 const getAllRooms = () => new Promise((resolve, reject) => {
   fetch(`${clientCredentials.databaseURL}/rooms`)
@@ -37,9 +38,49 @@ const getSingleRoom = (id) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const getRoomPieces = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/rooms/${id}`)
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+const deleteRoom = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/rooms/${id}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then((response) => resolve(response))
+    .catch((error) => reject(error));
+});
+
+const deleteRoomPieces = (roomId) => new Promise((resolve, reject) => {
+  getRoomPieces(roomId)
+    .then((piecesArray) => {
+      const deletePiecesPromises = piecesArray.map((piece) => deletePiece(piece.id));
+      Promise.all(deletePiecesPromises).then(() => {
+        deleteRoom(roomId).then(resolve);
+      });
+    }).catch((error) => reject(error));
+});
+
+const viewRoomDetails = (roomId) => new Promise((resolve, reject) => {
+  getSingleRoom(roomId)
+    .then((roomData) => {
+      getPieceByRoom(roomId).then((pieceData) => {
+        resolve({ roomData, pieceData });
+      });
+    })
+    .catch((error) => reject(error));
+});
+
 export {
   getAllRooms,
   createRoom,
   updateRoom,
   getSingleRoom,
+  getRoomPieces,
+  deleteRoom,
+  deleteRoomPieces,
+  viewRoomDetails,
 };

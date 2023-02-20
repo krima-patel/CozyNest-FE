@@ -23,7 +23,7 @@ export default function Pieces() {
       <div className="d-flex flex-wrap">
         {pieces?.map((piece) => (
           <section key={`piece--${piece.id}`} className="piece">
-            <PieceCard id={piece.id} pieceType={piece.piece_type} imageUrl={piece.image_url} source={piece.source} condition={piece.condition} />
+            <PieceCard id={piece.id} pieceType={piece.piece_type} imageUrl={piece.image_url} source={piece.source} condition={piece.condition} onUpdate={getAllThePieces} />
           </section>
         ))}
       </div>

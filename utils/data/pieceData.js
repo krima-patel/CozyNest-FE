@@ -37,9 +37,26 @@ const getSinglePiece = (id) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const deletePiece = (id) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/pieces/${id}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  })
+    .then((response) => resolve(response))
+    .catch((error) => reject(error));
+});
+
+const getPieceByRoom = (room) => fetch(`${clientCredentials.databaseURL}/pieces?room=${room}`)
+  .then((response) => (response.json()))
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
 export {
   getAllPieces,
   createPiece,
   updatePiece,
   getSinglePiece,
+  deletePiece,
+  getPieceByRoom,
 };
