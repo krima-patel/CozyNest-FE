@@ -39,7 +39,9 @@ const AuthProvider = (props) => {
           if ('null' in userInfo) {
             userObj = userInfo;
           } else {
-            userObj = { fbUser, uid: fbUser.uid, ...userInfo };
+            userObj = {
+              fbUser, uid: fbUser.uid, userName: fbUser.displayName, userImage: fbUser.photoURL, ...userInfo,
+            };
           }
           setUser(userObj);
         });

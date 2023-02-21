@@ -11,7 +11,7 @@ import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
-    <Navbar expand="lg">
+    <Navbar className="navbar" expand="lg">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Nav className="me-auto">
@@ -21,29 +21,36 @@ export default function NavBar() {
         </Nav>
         <Nav className="me-auto">
           <Link passHref href="/rooms">
-            <Nav.Link>Rooms</Nav.Link>
+            <Nav.Link>Browse Rooms</Nav.Link>
           </Link>
         </Nav>
         <Nav className="me-auto">
           <Link passHref href="/pieces">
-            <Nav.Link>Pieces</Nav.Link>
+            <Nav.Link>Browse Pieces</Nav.Link>
           </Link>
         </Nav>
-        <Nav className="me-auto">
+        <NavDropdown className="nav-dropdown">
+          <Link passHref href="/">
+            <NavDropdown.Item>What&#39;s your style?</NavDropdown.Item>
+          </Link>
+          <Link passHref href="/rooms">
+            <NavDropdown.Item>Browse Rooms</NavDropdown.Item>
+          </Link>
+          <Link passHref href="/pieces">
+            <NavDropdown.Item>Browse Pieces</NavDropdown.Item>
+          </Link>
           <Link passHref href="/rooms/new">
-            <Nav.Link>Add a Room</Nav.Link>
+            <NavDropdown.Item>Add Your Room</NavDropdown.Item>
           </Link>
-        </Nav>
-        <Nav className="me-auto">
           <Link passHref href="/pieces/new">
-            <Nav.Link>Add a Piece</Nav.Link>
+            <NavDropdown.Item>Add A Piece</NavDropdown.Item>
           </Link>
-        </Nav>
-        <NavDropdown.Item>
-          <button type="button" className="btn btn-sign-out" onClick={signOut}>
-            Sign Out
-          </button>
-        </NavDropdown.Item>
+          <NavDropdown.Item>
+            <button type="button" className="btn btn-sign-out" onClick={signOut}>
+              Sign Out
+            </button>
+          </NavDropdown.Item>
+        </NavDropdown>
       </Container>
     </Navbar>
   );
