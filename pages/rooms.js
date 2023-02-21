@@ -23,7 +23,7 @@ export default function Rooms() {
       <div className="d-flex flex-wrap">
         {rooms?.map((room) => (
           <section key={`room--${room.id}`} className="room">
-            <RoomCard id={room.id} name={room.name} purpose={room.purpose} theme={room.theme} mood={room.mood} deadline={room.deadline} onUpdate={getAllTheRooms} />
+            <RoomCard id={room.id} name={room.name} purpose={room.purpose} theme={room.theme} mood={room.mood} deadline={room.deadline} user={room.user} onUpdate={getAllTheRooms} />
           </section>
         ))}
       </div>

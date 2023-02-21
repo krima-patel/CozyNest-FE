@@ -18,8 +18,8 @@ const initialState = {
 };
 
 const PieceForm = ({ pieceObj }) => {
-  const [rooms, setRooms] = useState([]);
   const [pieceFormInput, setPieceFormInput] = useState(initialState);
+  const [rooms, setRooms] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
