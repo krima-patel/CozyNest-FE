@@ -74,16 +74,11 @@ const viewRoomDetails = (roomId) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const getUserRooms = (uid) => new Promise((resolve, reject) => {
-  fetch(`${clientCredentials.databaseURL}/rooms/user?=${uid}`)
-    .then((response) => {
-      if (response.data) {
-        resolve(Object.values(response.data));
-      } else {
-        resolve([]);
-      }
-    })
-    .catch((error) => reject(error));
+const getUserRooms = (user) => new Promise((resolve, reject) => {
+  fetch(`${clientCredentials.databaseURL}/rooms?userId=${user}`)
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
 });
 
 export {
