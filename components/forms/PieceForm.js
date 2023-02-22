@@ -5,7 +5,7 @@ import AsyncSelect from 'react-select/async';
 import PropTypes from 'prop-types';
 import { useAuth } from '../../utils/context/authContext';
 import { createPiece, updatePiece } from '../../utils/data/pieceData';
-import { getAllRooms } from '../../utils/data/roomData';
+import { getUserRooms } from '../../utils/data/roomData';
 import getStyles from '../../utils/data/styleData';
 
 const initialState = {
@@ -19,12 +19,13 @@ const initialState = {
 
 const PieceForm = ({ pieceObj }) => {
   const [pieceFormInput, setPieceFormInput] = useState(initialState);
-  const [rooms, setRooms] = useState([]);
+  const [userRooms, setUserRooms] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
+  console.warn(userRooms);
 
   useEffect(() => {
-    getAllRooms().then(setRooms);
+    getUserRooms(user.id).then(setUserRooms);
     if (pieceObj?.id) {
       console.warn(pieceObj);
       // eslint-disable-next-line react/prop-types
@@ -42,7 +43,7 @@ const PieceForm = ({ pieceObj }) => {
         designs: designStyles,
       });
     }
-  }, [pieceObj]);
+  }, [pieceObj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -65,7 +66,7 @@ const PieceForm = ({ pieceObj }) => {
       pieceFormInput.designs = pieceFormInput.designs.map((design) => design.value);
       updatePiece(pieceFormInput, pieceObj.id).then(() => router.push('/pieces'));
     } else {
-      const payload = { ...pieceFormInput, user: user.id };
+      const payload = { ...pieceFormInput, id: user.id };
       payload.designs = payload.designs.map((design) => design.value);
       createPiece(payload).then(() => router.push('/pieces'));
     }
@@ -91,7 +92,7 @@ const PieceForm = ({ pieceObj }) => {
           <FloatingLabel controlId="floatingSelect" label="Select the room this piece belongs to">
             <Form.Select aria-label="Room" name="room_id" value={pieceFormInput.room_id?.id} onChange={handleChange} className="mb-3" required>
               <option value="">Select Room</option>
-              {rooms?.map((room) => (
+              {userRooms?.map((room) => (
                 <option
                   key={room.id}
                   value={room.id}
