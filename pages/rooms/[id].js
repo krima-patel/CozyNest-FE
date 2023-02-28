@@ -11,8 +11,8 @@ export default function ViewRoom() {
 
   const getRoomDetails = useCallback(() => viewRoomDetails(id).then((data) => {
     setRoomData(data.roomData);
-    setPiecesData(data.piecesData);
-    console.log(piecesData);
+    setPiecesData(data.pieceData);
+    console.log(data);
   }), [id]);
 
   // const getRoomDetails = () => {
@@ -21,11 +21,6 @@ export default function ViewRoom() {
   //     setPiecesData(data?.pieceData || []);
   //   });
   // };
-
-  // const getJournalStoryDetails = useCallback(() => getJournalDetailsWithStory(id).then((data) => {
-  //   setJournal(data.journalData);
-  //   setStories(data.storyData);
-  // }), [id]);
 
   useEffect(() => {
     getRoomDetails();
@@ -50,8 +45,10 @@ export default function ViewRoom() {
         {piecesData?.map((piece) => (
           <PieceCard
             key={piece.id}
-            pieceObj={piece}
-            image_url={piece.image_url}
+            id={piece.id}
+            pieceType={piece.piece_type}
+            imageUrl={piece.image_url}
+            user={piece.user}
           />
         ))}
       </div>
