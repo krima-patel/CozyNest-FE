@@ -75,12 +75,14 @@ const PieceForm = ({ pieceObj }) => {
   return (
     <>
       <Form onSubmit={handleSubmit}>
+        <h2>Share your Piece</h2>
+        <h6>Share details about the piece</h6>
         <Form.Group className="mb-3">
           <Form.Label>What type of piece is this?</Form.Label>
           <Form.Control name="piece_type" required value={pieceFormInput.piece_type} onChange={handleChange} />
           <Form.Label>Where did you find this piece?</Form.Label>
           <Form.Control name="source" required value={pieceFormInput.source} onChange={handleChange} />
-          <Form.Label>Attach an Image of the Piece</Form.Label>
+          <Form.Label>Image of the Piece</Form.Label>
           <Form.Control name="image_url" required value={pieceFormInput.image_url} onChange={handleChange} />
           <FloatingLabel controlId="floatingSelect" label="Do you want this product new, used, or you want to DIY?">
             <Form.Select aria-label="Piece Condition" type="text" name="condition" value={pieceFormInput?.condition} onChange={handleChange} className="mb-3" required>
@@ -106,9 +108,9 @@ const PieceForm = ({ pieceObj }) => {
             </Form.Select>
           </FloatingLabel>
         </Form.Group>
-        <Form.Label>Select the Interior Design Styles</Form.Label>
+        <Form.Label>What interior design style(s) do you want to incorporate with this piece? Select as many as you like.</Form.Label>
         <AsyncSelect isMulti name="designs" value={pieceFormInput.designs} loadOptions={getStyles} defaultOptions className="basic-multi-select" classNamePrefix="select" onChange={designsHandleChange} />
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="form-btn">
           Submit
         </Button>
       </Form>

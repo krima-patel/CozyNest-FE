@@ -52,19 +52,21 @@ const RoomForm = ({ roomObj }) => {
   return (
     <>
       <Form onSubmit={handleSubmit}>
+        <h2>Add Your Room</h2>
+        <h6>Share the room you are designing! What&#39;s your vision?</h6>
         <Form.Group className="mb-3">
           <Form.Label>What room is this?</Form.Label>
           <Form.Control name="name" type="text" required value={formInput.name} onChange={handleChange} />
           <Form.Label>What purpose will this room serve?</Form.Label>
           <Form.Control name="purpose" type="text" required value={formInput.purpose} onChange={handleChange} />
-          <Form.Label>What is the theme?</Form.Label>
+          <Form.Label>What is the theme? (Color scheme, holidays, etc.)</Form.Label>
           <Form.Control name="theme" type="text" required value={formInput.theme} onChange={handleChange} />
           <Form.Label>What ambience do you want to create?</Form.Label>
           <Form.Control name="mood" type="text" required value={formInput.mood} onChange={handleChange} />
-          <Form.Label>When do you want to have this room complete?</Form.Label>
+          <Form.Label>Expected Completion Date:</Form.Label>
           <Form.Control name="deadline" type="date" required value={formInput.deadline} onChange={handleChange} />
         </Form.Group>
-        <Button variant="primary" type="submit">Submit</Button>
+        <Button variant="primary" type="submit" className="form-btn">Submit</Button>
       </Form>
     </>
   );

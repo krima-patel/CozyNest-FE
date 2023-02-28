@@ -46,7 +46,7 @@ const deletePiece = (id) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-const getPieceByRoom = (id) => fetch(`${clientCredentials.databaseURL}/pieces?room=${id}`)
+const getPieceByRoom = (id) => fetch(`${clientCredentials.databaseURL}/pieces?rooms=${id}`)
   .then((response) => (response.json()))
   .catch((error) => {
     console.error('Error:', error);

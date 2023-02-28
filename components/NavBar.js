@@ -14,19 +14,19 @@ export default function NavBar() {
     <Navbar className="navbar" expand="lg">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Nav className="me-auto">
+        <Nav className="me-auto-navbar">
           <Link passHref href="/">
-            <Nav.Link>What&#39;s your Style?</Nav.Link>
+            <Nav.Link className="navbar-links">What&#39;s your Style?</Nav.Link>
           </Link>
         </Nav>
-        <Nav className="me-auto">
+        <Nav className="me-auto-navbar">
           <Link passHref href="/rooms">
-            <Nav.Link>Browse Rooms</Nav.Link>
+            <Nav.Link className="navbar-links">Browse Rooms</Nav.Link>
           </Link>
         </Nav>
-        <Nav className="me-auto">
+        <Nav className="me-auto-navbar">
           <Link passHref href="/pieces">
-            <Nav.Link>Browse Pieces</Nav.Link>
+            <Nav.Link className="navbar-links">Browse Pieces</Nav.Link>
           </Link>
         </Nav>
         <NavDropdown className="nav-dropdown">
