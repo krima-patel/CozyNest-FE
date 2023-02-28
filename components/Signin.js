@@ -18,6 +18,8 @@ function Signin() {
       }}
     >
       <h1>Hi there!</h1>
+      <h2>Welcome to Cozy Nest!</h2>
+      <p>Cozy Nest is an application for those who love interior design, but they&#39;re a little overwhelmed with the process and need to lay their ideas out or they want to get inspiration from others. We can  </p>
       <p>Click the button below to start designing!</p>
       <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
         Sign In

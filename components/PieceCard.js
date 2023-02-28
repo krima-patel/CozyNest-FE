@@ -26,7 +26,7 @@ export default function PieceCard({
         <Card.Img variant="top" src={imageUrl} alt={pieceType} style={{ height: '300px' }} className="card-img-top" />
         <h5 style={{ color: '#DC6434' }}>{aUser.user.userName}</h5>
         <img className="user-image" src={aUser.user.userImage} alt={aUser.user.userName} />
-        {userId === user.uid ? (
+        {userId === user?.uid ? (
           <>
             <Link href={`/pieces/${id}`} passHref>
               <Button className="pieces-btns">More Info</Button>
