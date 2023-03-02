@@ -4,9 +4,33 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: garamond;
     color: #a06881;
+}
+
+.design-names {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.design-images {
+  float: left;
+  width:  400px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.design-text {
+  text-align: center;
 }
 
 .navbar-links {
