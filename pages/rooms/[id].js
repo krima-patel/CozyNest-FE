@@ -29,18 +29,18 @@ export default function ViewRoom() {
 
   return (
     <div>
-      <h2 style={{ color: '#DC6434', margin: '20px' }}>{roomData.name}</h2>
-      <h5 style={{ color: '#344729', margin: '20px' }}>Purpose of my room: {roomData.purpose}</h5>
-      <h3 style={{ color: '#344729', margin: '20px' }}>Theme I&#39;m going for:</h3>
-      <p>
+      <h1 style={{ color: '#a06881', margin: '10px 20px' }}><b>Designing</b>: {roomData.name}</h1>
+      <h3 style={{ color: '#361d18', margin: '10px 20px' }}><b>Purpose of my room</b>: {roomData.purpose}</h3>
+      <h5 style={{ color: '#361d18', margin: ' 10px 20px' }}><b>Theme</b> I&#39;m going for:</h5>
+      <h6 style={{ margin: '10px 20px' }}>
         {roomData.theme}
-      </p>
-      <p>
-        The ambience I&#39;m trying to achieve for this room: {roomData.mood}
-      </p>
-      <p>
-        I want to complete this room by: {roomData.deadline}
-      </p>
+      </h6>
+      <h6 style={{ margin: '10px 20px' }}>
+        The <b>ambience</b> I&#39;m trying to achieve for this room: {roomData.mood}
+      </h6>
+      <h6 style={{ margin: '10px 20px' }}>
+        Expected Completion Date for Room: {roomData.deadline}
+      </h6>
       <div className="piecesContainer">
         {piecesData?.map((piece) => (
           <PieceCard

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import Link from 'next/link';
 import { deletePiece } from '../utils/data/pieceData';
 import { useAuth } from '../utils/context/authContext';
@@ -22,25 +22,25 @@ export default function PieceCard({
   return (
     <Card className="cards" style={{ width: '18rem' }}>
       <Card.Body>
+        <img className="user-image" src={aUser.user.userImage} alt={aUser.user.userName} />
+        <h5 style={{ color: '#a06881' }}><b>{aUser.user.userName}</b> likes this piece:</h5>
         <Card.Title>{pieceType}</Card.Title>
         <Card.Img variant="top" src={imageUrl} alt={pieceType} style={{ height: '300px' }} className="card-img-top" />
-        <h5 style={{ color: '#DC6434' }}>{aUser.user.userName}</h5>
-        <img className="user-image" src={aUser.user.userImage} alt={aUser.user.userName} />
         {userId === user?.uid ? (
           <>
             <Link href={`/pieces/${id}`} passHref>
-              <Button className="pieces-btns">More Info</Button>
+              <button type="button" className="pieces-btns">View More</button>
             </Link>
             <Link href={`/pieces/edit/${id}`} passHref>
-              <Button className="pieces-btns">Update</Button>
+              <button type="button" className="pieces-btns">Update</button>
             </Link>
-            <Button onClick={deleteThisPiece} className="pieces-btns" id="delete-btn">
+            <button type="button" onClick={deleteThisPiece} className="pieces-btns" id="delete-btn">
               Delete
-            </Button>
+            </button>
           </>
         ) : (
           <Link href={`/pieces/${id}`} passHref>
-            <Button className="pieces-btns">Learn More</Button>
+            <button type="button" className="pieces-btns">View More</button>
           </Link>
         )}
       </Card.Body>

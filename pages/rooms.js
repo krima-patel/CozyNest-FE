@@ -17,8 +17,8 @@ export default function Rooms() {
   return (
     <>
       <>
-        <h1 className="rooms">Rooms</h1>
-        <h5 className="rooms">Browse the Rooms</h5>
+        <h1 className="rooms">Browse through Rooms</h1>
+        <h5 className="rooms">View the rooms users are designing here on Cozy Nest or share your own room! Get inspired or inspire others with your creativity.</h5>
       </>
       <div className="d-flex flex-wrap">
         {rooms?.map((room) => (
