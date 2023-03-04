@@ -75,7 +75,7 @@ const viewRoomDetails = (roomId) => new Promise((resolve, reject) => {
 });
 
 const getUserRooms = (user) => new Promise((resolve, reject) => {
-  fetch(`${clientCredentials.databaseURL}/rooms?userId=${user}`)
+  fetch(`${clientCredentials.databaseURL}/rooms?user=${user}`)
     .then((response) => response.json())
     .then(resolve)
     .catch(reject);

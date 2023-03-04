@@ -17,8 +17,8 @@ export default function Pieces() {
   return (
     <>
       <>
-        <h1 className="pieces">Pieces</h1>
-        <h5 className="pieces">Browse the Pieces</h5>
+        <h1 className="pieces">Browse through Pieces</h1>
+        <h5 className="pieces">Here, you can view pieces and items users are sharing when designing their rooms. Share your pieces below with Cozy Nest users!</h5>
       </>
       <div className="d-flex flex-wrap">
         {pieces?.map((piece) => (

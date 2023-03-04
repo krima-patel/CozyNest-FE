@@ -8,6 +8,16 @@ body {
     color: #a06881;
 }
 
+.sign-in-btn {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+  border-color: #565264;
+  background-color: #565264;
+  color: white;
+  border-radius: 30px;
+}
+
 .design-names {
   text-align: center;
   padding: 10px;
@@ -50,9 +60,19 @@ body {
   background-color: white;
 }
 
+.sign-in-image {
+  padding-bottom: 30px;
+}
+
 .copy-btn {
   background-color: #565264;
   border: #565264;
+}
+
+.user-image {
+  border-radius: 50px;
+  width: 45px;
+  margin-bottom: 10px;
 }
 
 .form-btn {
@@ -61,12 +81,39 @@ body {
 }
 
 .cards {
-  padding: 5px 10px;
-  margin: 20px;
+  padding: 10px 20px;
+  margin: 15px;
+  height: 100%;
+  border-width: 5px;
+  border-radius: 30px;
 }
 
 .navbar {
   padding: 14px 16px;
   margin: 10px;
   text-align: center;
+}
+
+.rooms-btn, .pieces-btns {
+  background-color: #565264;
+  border-color: #565264;
+  color: white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 5px;
+  display: flex;
+}
+
+.rooms, .pieces {
+  text-align: center;
+}
+
+.piece-image {
+  float: left;
+  width:  400px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 10px;
 }

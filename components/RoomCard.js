@@ -1,7 +1,6 @@
 /* eslint-disable react/forbid-prop-types */
-import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import Link from 'next/link';
 import { deleteRoom } from '../utils/data/roomData';
 import { useAuth } from '../utils/context/authContext';
@@ -27,26 +26,26 @@ export default function RoomCard({
   return (
     <Card className="cards" style={{ width: '18rem' }}>
       <Card.Body>
+        <img className="user-image" src={aUser.user.userImage} alt={aUser.user.userName} />
+        <h5 className="username"><b>{aUser.user.userName}</b> is designing...</h5>
         <Card.Title>{name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Purpose of Room: {purpose}</Card.Subtitle>
         <Card.Subtitle className="product-date">Expected Completion date: {deadline}</Card.Subtitle>
-        <h5 style={{ color: '#DC6434' }}>{aUser.user.userName}</h5>
-        <img className="user-image" src={aUser.user.userImage} alt={aUser.user.userName} />
         {userId === user?.uid ? (
           <>
             <Link href={`/rooms/${id}`} passHref>
-              <Button className="rooms-btns">Learn More</Button>
+              <button type="button" className="rooms-btn">View More</button>
             </Link>
             <Link href={`/rooms/edit/${id}`} passHref>
-              <Button className="rooms-btns">Update</Button>
+              <button type="button" className="rooms-btn">Update</button>
             </Link>
-            <Button onClick={deleteThisRoom} className="rooms-btn" id="delete-btn">
+            <button type="button" onClick={deleteThisRoom} className="rooms-btn" id="delete-btn">
               Delete
-            </Button>
+            </button>
           </>
         ) : (
           <Link href={`/rooms/${id}`} passHref>
-            <Button className="rooms-btns">Learn More</Button>
+            <button type="button" className="rooms-btn">View More</button>
           </Link>
         )}
       </Card.Body>
