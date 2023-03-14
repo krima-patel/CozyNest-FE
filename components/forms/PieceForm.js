@@ -5,7 +5,7 @@ import AsyncSelect from 'react-select/async';
 import PropTypes from 'prop-types';
 import { useAuth } from '../../utils/context/authContext';
 import { createPiece, updatePiece } from '../../utils/data/pieceData';
-import { getAllRooms } from '../../utils/data/roomData';
+import { getUserRooms } from '../../utils/data/roomData';
 import getStyles from '../../utils/data/styleData';
 
 const initialState = {
@@ -19,12 +19,13 @@ const initialState = {
 
 const PieceForm = ({ pieceObj }) => {
   const [pieceFormInput, setPieceFormInput] = useState(initialState);
-  const [rooms, setRooms] = useState([]);
+  const [userRooms, setUserRooms] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
+  console.warn(user.id);
 
   useEffect(() => {
-    getAllRooms().then(setRooms);
+    getUserRooms(user.id).then(setUserRooms);
     if (pieceObj?.id) {
       console.warn(pieceObj);
       // eslint-disable-next-line react/prop-types
@@ -40,9 +41,10 @@ const PieceForm = ({ pieceObj }) => {
         source: pieceObj.source,
         condition: pieceObj.condition,
         designs: designStyles,
+        user: user.id,
       });
     }
-  }, [pieceObj]);
+  }, [pieceObj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -74,8 +76,6 @@ const PieceForm = ({ pieceObj }) => {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <h2>Share A Piece</h2>
-        <h6>Find a decor piece you love? Share it here. It can be anything.</h6>
         <Form.Group className="mb-3">
           <Form.Label>What type of piece is this?</Form.Label>
           <Form.Control name="piece_type" required value={pieceFormInput.piece_type} onChange={handleChange} />
@@ -93,7 +93,7 @@ const PieceForm = ({ pieceObj }) => {
           <FloatingLabel controlId="floatingSelect" label="Select the room this piece belongs to">
             <Form.Select aria-label="Room" name="room_id" value={pieceFormInput.room_id?.id} onChange={handleChange} className="mb-3" required>
               <option value="">Select Room</option>
-              {rooms?.map((room) => (
+              {userRooms?.map((room) => (
                 <option
                   key={room.id}
                   value={room.id}
@@ -109,7 +109,7 @@ const PieceForm = ({ pieceObj }) => {
         </Form.Group>
         <Form.Label>Select the Interior Design Styles</Form.Label>
         <AsyncSelect isMulti name="designs" value={pieceFormInput.designs} loadOptions={getStyles} defaultOptions className="basic-multi-select" classNamePrefix="select" onChange={designsHandleChange} />
-        <Button variant="primary" type="submit" className="form-btn">
+        <Button variant="primary" type="submit">
           Submit
         </Button>
       </Form>
@@ -131,9 +131,7 @@ PieceForm.propTypes = {
     condition: PropTypes.string,
     user: PropTypes.shape({
       id: PropTypes.number,
-      name: PropTypes.string,
-      bio: PropTypes.string,
-      uid: PropTypes.string,
+      uid: PropTypes.number,
     }),
   }).isRequired,
 };

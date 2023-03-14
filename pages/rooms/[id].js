@@ -12,7 +12,6 @@ export default function ViewRoom() {
   const getRoomDetails = useCallback(() => viewRoomDetails(id).then((data) => {
     setRoomData(data.roomData);
     setPiecesData(data.pieceData);
-    console.log(data);
   }), [id]);
 
   // const getRoomDetails = () => {

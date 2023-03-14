@@ -6,9 +6,10 @@ import { registerUser } from '../utils/auth'; // Update with path to registerUse
 
 function RegisterForm({ user, updateUser }) {
   const [formData, setFormData] = useState({
+    uid: user.uid,
     name: '',
     bio: '',
-    uid: user.uid,
+    image: '',
   });
 
   const handleSubmit = (e) => {
@@ -19,9 +20,13 @@ function RegisterForm({ user, updateUser }) {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Your Name</Form.Label>
+        <Form.Control as="textarea" name="name" required placeholder="Enter your Name" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
         <Form.Label>Design Bio</Form.Label>
         <Form.Control as="textarea" name="bio" required placeholder="Enter your Design Bio" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
         <Form.Text className="text-muted">Let other users know a little bit about you and your design style...</Form.Text>
+        <Form.Label>Add Your Profile Pic Here</Form.Label>
+        <Form.Control as="textarea" name="image" required placeholder="Add Your Profile Pic Here" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
       </Form.Group>
       <Button variant="primary" type="submit">
         Submit

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/forbid-prop-types */
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
@@ -21,13 +22,11 @@ export default function RoomCard({
       deleteRoom(id).then(() => onUpdate());
     }
   };
-  console.warn(userId);
-  console.error(user.uid);
   return (
     <Card className="cards" style={{ width: '18rem' }}>
       <Card.Body>
-        <img className="user-image" src={aUser.user.userImage} alt={aUser.user.userName} />
-        <h5 className="username"><b>{aUser.user.userName}</b> is designing...</h5>
+        <img className="user-image" src={user?.image} alt={user.name} />
+        <h5 className="username"><b>{user.name}</b> is designing...</h5>
         <Card.Title>{name}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Purpose of Room: {purpose}</Card.Subtitle>
         <Card.Subtitle className="product-date">Expected Completion date: {deadline}</Card.Subtitle>
@@ -58,6 +57,11 @@ RoomCard.propTypes = {
   name: PropTypes.string.isRequired,
   purpose: PropTypes.string.isRequired,
   deadline: PropTypes.string.isRequired,
-  user: PropTypes.number.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    image: PropTypes.string,
+    uid: PropTypes.string,
+  }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };

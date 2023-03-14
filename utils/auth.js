@@ -20,7 +20,12 @@ const checkUser = (uid) => new Promise((resolve, reject) => {
 const registerUser = (userInfo) => new Promise((resolve, reject) => {
   fetch(`${clientCredentials.databaseURL}/register`, {
     method: 'POST',
-    body: JSON.stringify(userInfo),
+    body: JSON.stringify({
+      uid: userInfo.uid,
+      name: userInfo.name,
+      bio: userInfo.bio,
+      image: userInfo.image,
+    }),
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
