@@ -29,7 +29,7 @@ const AuthProvider = (props) => {
     }),
     [oAuthUser],
   );
-
+  console.log(oAuthUser?.photoURL);
   useEffect(() => {
     firebase.auth().onAuthStateChanged((fbUser) => {
       if (fbUser) {
@@ -40,7 +40,7 @@ const AuthProvider = (props) => {
             userObj = userInfo;
           } else {
             userObj = {
-              fbUser, uid: fbUser.uid, userName: fbUser.displayName, userImage: fbUser.photoURL, ...userInfo,
+              fbUser, uid: fbUser?.uid, userName: fbUser?.displayName, image: fbUser?.photoURL, ...userInfo,
             };
           }
           setUser(userObj);

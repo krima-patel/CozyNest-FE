@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card } from 'react-bootstrap';
@@ -22,8 +23,8 @@ export default function PieceCard({
   return (
     <Card className="cards" style={{ width: '18rem' }}>
       <Card.Body>
-        <img className="user-image" src={aUser.user.userImage} alt={aUser.user.userName} />
-        <h5 style={{ color: '#a06881' }}><b>{aUser.user.userName}</b> likes this piece:</h5>
+        <img className="user-image" src={user?.image} alt={user.name} />
+        <h5 style={{ color: '#a06881' }}><b>{user.name}</b> likes this piece:</h5>
         <Card.Title>{pieceType}</Card.Title>
         <Card.Img variant="top" src={imageUrl} alt={pieceType} style={{ height: '300px' }} className="card-img-top" />
         {userId === user?.uid ? (
@@ -52,6 +53,11 @@ PieceCard.propTypes = {
   id: PropTypes.number.isRequired,
   pieceType: PropTypes.string.isRequired,
   imageUrl: PropTypes.string.isRequired,
-  user: PropTypes.number.isRequired,
+  user: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    image: PropTypes.string,
+    uid: PropTypes.string,
+  }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
