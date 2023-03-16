@@ -24,7 +24,7 @@ Cozy Nest is an interior design and decor application providing users structure 
 
 * Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
-## Begin Designing Your Own Cozy Nest! Run on your local machine:
+## Begin Designing Your Own Cozy Nest!
 In order for the client side to work, you will need to run the server side API server/debugger. [Here](https://github.com/krima-patel/CozyNest-BE) is my server side repo. The server side API server/debugger must be running at the same time as the client side. Follow the instructions on the Cozy Nest server-side repo's README.md
 
 ### Run Frontend Locally
@@ -61,7 +61,7 @@ Krima Patel
 
 Have any questions or comments about Cozy Nest? Please leave them in [this dicussion board](https://github.com/krima-patel/CozyNest-FE/discussions)!
 
-## Backend Tech Stacks: 
+## Backend Tech Stacks
 <div align="center">  
 <a href="https://www.python.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/python-original.svg" alt="Python" height="50" /></a>  
 <a href="https://www.djangoproject.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/django-original.svg" alt="Django" height="50" /></a>
@@ -72,7 +72,7 @@ Have any questions or comments about Cozy Nest? Please leave them in [this dicus
 
 <br/>
   
-## Frontend Tech Stacks:
+## Frontend Tech Stacks
 <div align="center">  
 <a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
 <a href="https://getbootstrap.com/docs/3.4/javascript/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /></a>  
