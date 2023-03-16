@@ -6,8 +6,8 @@ Cozy Nest is an interior design and decor application providing users structure 
 ## Primary Features of Cozy Nest
 
 * Google Authentication is required to gain access to Cozy Nest
-** Upon authentication, new user will be shown a form to fill out before accessing contents of the application
-** Landing page will provide users with images and descriptions of the 18 most popular interior design styles, allowing users to better determine what styles they may want to incorporate into their spaces
+  * Upon authentication, new user will be shown a form to fill out before accessing contents of the application
+  * Landing page will provide users with images and descriptions of the 18 most popular interior design styles, allowing users to better determine what styles they may want to incorporate into their spaces
 
 Public view - all authenticated users can view rooms and pieces created by other authenticated users
 
