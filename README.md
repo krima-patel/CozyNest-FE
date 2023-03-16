@@ -28,6 +28,7 @@ Cozy Nest is an interior design and decor application providing users structure 
 - Add a Room is a form that asks users about the room they are designing
 - Share a Piece is a form that asks users information about a piece they want to share and put in a particular room
 
+## Planning Documents:
 - [Cozy Nest ERD](https://dbdiagram.io/d/63de819e296d97641d7e7174)
 - [Cozy Nest Wireframe](https://whimsical.com/krima-s-cozynest-wireframe-GuLoPWBKnZSPUK3dahrGRd)
 
