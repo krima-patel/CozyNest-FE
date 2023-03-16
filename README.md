@@ -12,14 +12,14 @@ Cozy Nest is an interior design and decor application providing users structure 
 * Public view - all authenticated users can view rooms and pieces created by other authenticated users
 
 * Rooms:
- * Authenticated users are able to create their a room/space
- * Authenticated users are able to edit and delete rooms they have created, but can only view rooms created by other authenticated users
+  * Authenticated users are able to create their a room/space
+  * Authenticated users are able to edit and delete rooms they have created, but can only view rooms created by other authenticated users
 
 * Pieces:
- * Authenticated users are able to submit a piece(s) that accompanies a particular room
- * Authenticated users are able to create a piece they would like to share
- * Authenticated users are able to select one room they would like a piece to belong to. The room they select will be a room they have created, not a room created by another authenticated user.
- * Authenticated users are able to edit and delete pieces they have created and shared, but can only view pieces created by other authenticated users
+  * Authenticated users are able to submit a piece(s) that accompanies a particular room
+  * Authenticated users are able to create a piece they would like to share
+  * Authenticated users are able to select one room they would like a piece to belong to. The room they select will be a room they have created, not a room created by another authenticated user.
+  * Authenticated users are able to edit and delete pieces they have created and shared, but can only view pieces created by other authenticated users
 
 * Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
