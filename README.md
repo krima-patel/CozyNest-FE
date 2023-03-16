@@ -3,7 +3,7 @@
 ## Purpose and Target Audience
 Cozy Nest is an interior design and decor application for those looking for structure when it comes to designing their space. Designing a new space or renovating an existing one is always exciting, but oftentimes people can easily become inundated with the myriad of ideas and inspirations. This is where Cozy Nest comes in! You can add the specific rooms you want to design and the pieces you want in your rooms. This allows the user to keep an account of the rooms and pieces, while also being able to visualize the room and the associated pieces. This streamlines the home design process, giving users more clarity and peace of mind.
 
-## 🏠 Primary Features of Cozy Nest 🏠
+## Primary Features of Cozy Nest
 
 - Google Authentication is required to gain access to Cozy Nest
 - Upon authentication, new user will be shown a form to fill out before accessing contents of the application
@@ -18,7 +18,7 @@ Cozy Nest is an interior design and decor application for those looking for stru
 - Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
 
-## 🏠 Begin Designing Your Own Cozy Nest! 🏠
+## Begin Designing Your Own Cozy Nest!
 
 - Begin by clicking "Sign In". You will be presented with a form, asking for your name (this can be anything you want), an image (again, anything you want), and your design bio
 - After submitting the form, you will come to the landing page, "What's Your Style?" page
@@ -31,11 +31,11 @@ Cozy Nest is an interior design and decor application for those looking for stru
 - [Cozy Nest ERD](https://dbdiagram.io/d/63de819e296d97641d7e7174)
 - [Cozy Nest Wireframe](https://whimsical.com/krima-s-cozynest-wireframe-GuLoPWBKnZSPUK3dahrGRd)
 
-## 🏠 Contributions 🏠
+## Contributions
 
 Krima Patel
 - [Krima's LinkedIn](https://www.linkedin.com/in/krima-patel/)
 - Krima's email: patel.krima@hotmail.com
 ## Have Questions?
 
-🤔 Have any questions or comments about Cozy Nest? Please leave them in [this dicussion board](https://github.com/krima-patel/CozyNest-FE/discussions)!
+Have any questions or comments about Cozy Nest? Please leave them in [this dicussion board](https://github.com/krima-patel/CozyNest-FE/discussions)!
