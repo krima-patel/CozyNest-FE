@@ -8,17 +8,20 @@ Cozy Nest is an interior design and decor application providing users structure 
 Google Authentication is required to gain access to Cozy Nest
 - Upon authentication, new user will be shown a form to fill out before accessing contents of the application
 - Landing page will provide users with images and descriptions of the 18 most popular interior design styles, allowing users to better determine what styles they may want to incorporate into their spaces
+
 Public view - all authenticated users can view rooms and pieces created by other authenticated users
+
 Rooms:
 - Authenticated users are able to create their a room/space
 - Authenticated users are able to edit and delete rooms they have created, but can only view rooms created by other authenticated users
+
 Pieces:
 - Authenticated users are able to submit a piece(s) that accompanies a particular room
 - Authenticated users are able to create a piece they would like to share
 - Authenticated users are able to select one room they would like a piece to belong to. The room they select will be a room they have created, not a room created by another authenticated user.
 - Authenticated users are able to edit and delete pieces they have created and shared, but can only view pieces created by other authenticated users
-Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
+Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
 ## Begin Designing Your Own Cozy Nest! Run on your local machine:
 In order for the client side to work, you will need to run the server side API server/debugger. [Here](https://github.com/krima-patel/CozyNest-BE) is my server side repo. The server side API server/debugger must be running at the same time as the client side. Follow the instructions on the Cozy Nest server-side repo's README.md
