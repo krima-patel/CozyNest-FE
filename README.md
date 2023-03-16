@@ -1,7 +1,7 @@
 
 # 🏠 Cozy Nest: Client Side 🏠
 ## Purpose and Target Audience
-Cozy Nest is an interior design and decor application for those looking for structure when it comes to designing their space. Designing a new space or renovating an existing one is always exciting, but oftentimes people can easily become inundated with the myriad of ideas and inspirations. This is where Cozy Nest comes in! You can add the specific rooms you want to design and the pieces you want in your rooms. This allows the user to keep an account of the rooms and pieces, while also being able to visualize the room and the associated pieces. This streamlines the home design process, giving users more clarity and peace of mind.
+Cozy Nest is an interior design and decor application providing users structure when it comes to designing their space. Designing a new space or renovating an existing one is always exciting, but oftentimes people can easily become inundated with the myriad of ideas and inspirations. This is where Cozy Nest comes in! You can add the specific rooms you want to design and the pieces you want in your rooms. This allows the user to keep an account of the rooms and pieces, while also being able to visualize the room and the associated pieces. This streamlines the home design process, giving users more clarity and peace of mind.
 
 ## Primary Features of Cozy Nest
 
