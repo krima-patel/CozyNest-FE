@@ -9,7 +9,8 @@ Cozy Nest is an interior design and decor application providing users structure 
   * Upon authentication, new user will be shown a form to fill out before accessing contents of the application
   * Landing page will provide users with images and descriptions of the 18 most popular interior design styles, allowing users to better determine what styles they may want to incorporate into their spaces
 
-* Public view - all authenticated users can view rooms and pieces created by other authenticated users
+* Public view: 
+  * All authenticated users can view rooms and pieces created by other authenticated users
 
 * Rooms:
   * Authenticated users are able to create their a room/space
