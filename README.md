@@ -5,28 +5,44 @@ Cozy Nest is an interior design and decor application providing users structure 
 
 ## Primary Features of Cozy Nest
 
-- Google Authentication is required to gain access to Cozy Nest
+Google Authentication is required to gain access to Cozy Nest
 - Upon authentication, new user will be shown a form to fill out before accessing contents of the application
 - Landing page will provide users with images and descriptions of the 18 most popular interior design styles, allowing users to better determine what styles they may want to incorporate into their spaces
-- Public view - all authenticated users can view rooms and pieces created by other authenticated users
+Public view - all authenticated users can view rooms and pieces created by other authenticated users
+Rooms:
 - Authenticated users are able to create their a room/space
-- Authenticated users are able to submit a piece(s) that accompanies a particular room
 - Authenticated users are able to edit and delete rooms they have created, but can only view rooms created by other authenticated users
+Pieces:
+- Authenticated users are able to submit a piece(s) that accompanies a particular room
 - Authenticated users are able to create a piece they would like to share
 - Authenticated users are able to select one room they would like a piece to belong to. The room they select will be a room they have created, not a room created by another authenticated user.
 - Authenticated users are able to edit and delete pieces they have created and shared, but can only view pieces created by other authenticated users
-- Users are able to sign out of the application via the "Sign Out" button on the nav bar
+Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
 
-## Begin Designing Your Own Cozy Nest!
+## Begin Designing Your Own Cozy Nest! Run on your local machine:
+In order for the client side to work, you will need to run the server side API server/debugger. [Here](https://github.com/krima-patel/CozyNest-BE) is my server side repo. The server side API server/debugger must be running at the same time as the client side. Follow the instructions on the Cozy Nest server-side repo's README.md
 
-- Begin by clicking "Sign In". You will be presented with a form, asking for your name (this can be anything you want), an image (again, anything you want), and your design bio
-- After submitting the form, you will come to the landing page, "What's Your Style?" page
-- The Browse Rooms page allows authenicated users to view rooms users are designing
-- When viewing a single room, all authenticated users are able to view the pieces and details pertaining to that specific room
-- The Browse Pieces page allows authenicated users to view pieces users are sharing
-- Add a Room is a form that asks users about the room they are designing
-- Share a Piece is a form that asks users information about a piece they want to share and put in a particular room
+### Run Frontend Locally
+1. First, set up [Google Firebase Authentication](https://firebase.google.com/).
+2. Clone the CozyNest-FE repo to your local machine:
+git@github.com:krima-patel/CozyNest-FE.git
+3. Go into the directory:
+cd CozyNest-FE
+4. Once CozyNest-FE project is open, make sure you are at the root level of your the project and create a .env file. You will put your environmental variables into your .env file:
+NEXT_PUBLIC_FIREBASE_API_KEY=""
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
+NEXT_PUBLIC_DATABASE_URL="http://localhost:8000"
+5. You will find your environmental variables in your Google Firebase by going to Project Overview -> Project Settings - Your Apps
+6. Copy and Paste your respective variables into the empty strings.
+7. Go to your terminal in your project, while in the root directory, run this command:
+npm install or npm i
+8. Now run this command:
+npm run prepare
+9. Then run this command to start Cozy Nest and view it in your browser:
+npm run dev
+10. Click http://localhost:3000 in the terminal to open Cozy Nest in your browser
+11. Have fun viewing and designing on Cozy Nest! If you want to stop the server at any point, press ctrl+C
 
 ## Planning Documents:
 - [Cozy Nest ERD](https://dbdiagram.io/d/63de819e296d97641d7e7174)
