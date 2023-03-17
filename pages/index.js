@@ -9,9 +9,9 @@ function Home() {
   return (
     <>
       <div>
-        <h1 className="welcome">Hello, {user.fbUser.displayName}!</h1>
-        <h3>Welcome to Cozy Nest!</h3>
-        <p>Your Design Bio: {user.bio}</p>
+        <h1 className="welcome" style={{ marginTop: '40px' }}>Hey, {user.name}! What&#39;s Your Style?</h1>
+        <p className="welcome"><b>Your Design Bio:</b> {user.bio}</p>
+        <h5 className="design-intro">Here, you will find information about the most popular interior design styles. If you are new to interior design or even someone who is more experienced, the <i>What&#39;s Your Style</i> page will guide you or possibly inspire you! View the variety of styles, mix and match them, design as you please. Don&#39;t be afraid to try something new! Remember, you are the designer of your Cozy Nest, make sure it is uniquely yours.</h5>
       </div>
       <h1 className="design-names">Modern</h1>
       <div>
@@ -26,7 +26,7 @@ function Home() {
         </div>
       </div>
       <div className="design-text">
-        <p>Modern interior design is similar to minimalism in many ways. It is all about a clean, sleek and uncluttered space. This style began in the 19th century with keeping decor a minimum and focusing on more industrial materials. It is challenging to create one definition for real modernism, but it is rooted in clean lines, solid colors and keeping simplicity at its core.</p>
+        Modern interior design is similar to minimalism in many ways. It is all about a clean, sleek and uncluttered space. This style began in the 19th century with keeping decor a minimum and focusing on more industrial materials. It is challenging to create one definition for real modernism, but it is rooted in clean lines, solid colors and keeping simplicity at its core.
       </div>
       <h1 className="design-names">Minimalist</h1>
       <div>

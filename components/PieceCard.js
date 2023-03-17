@@ -24,13 +24,13 @@ export default function PieceCard({
     <Card className="cards" style={{ width: '18rem' }}>
       <Card.Body>
         <img className="user-image" src={user?.image} alt={user.name} />
-        <h5 style={{ color: '#a06881' }}><b>{user.name}</b> likes this piece:</h5>
-        <Card.Title>{pieceType}</Card.Title>
+        <h5 style={{ color: '#565264' }}><b>{user.name}</b> is sharing:</h5>
+        <Card.Title style={{ textAlign: 'center', padding: '7px' }}>{pieceType}</Card.Title>
         <Card.Img variant="top" src={imageUrl} alt={pieceType} style={{ height: '300px' }} className="card-img-top" />
         {userId === user?.uid ? (
           <>
             <Link href={`/pieces/${id}`} passHref>
-              <button type="button" className="pieces-btns">View More</button>
+              <button type="button" className="pieces-btns">View</button>
             </Link>
             <Link href={`/pieces/edit/${id}`} passHref>
               <button type="button" className="pieces-btns">Update</button>

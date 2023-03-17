@@ -64,9 +64,9 @@ const RoomForm = ({ roomObj }) => {
           <Form.Label>What ambience do you want to create?</Form.Label>
           <Form.Control name="mood" type="text" required value={formInput.mood} onChange={handleChange} />
           <Form.Label>Expected Completion Date:</Form.Label>
-          <Form.Control name="deadline" type="date" required value={formInput.deadline} onChange={handleChange} />
+          <Form.Control name="deadline" type="date" className="form-select" required value={formInput.deadline} onChange={handleChange} />
         </Form.Group>
-        <Button variant="primary" type="submit" className="form-btn">Submit</Button>
+        <Button variant="success" type="submit" className="form-btn">Submit</Button>
       </Form>
     </>
   );

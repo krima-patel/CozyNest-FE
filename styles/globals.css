@@ -4,24 +4,30 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-    color: #a06881;
+  font-family: open sans;
+    color: #565264;
 }
 
 .sign-in-btn {
   font-size: 20px;
   padding: 10px;
   margin: 15px;
-  border-color: #565264;
+  border-color:#565264;
   background-color: #565264;
   color: white;
   border-radius: 30px;
 }
 
+.welcome {
+  text-align: center;
+  color: #565264;
+}
+
 .design-names {
   text-align: center;
   padding: 10px;
-  margin: 10px;
+  margin-top: 50px;
+  color: #565264;
 }
 
 .column {
@@ -41,10 +47,8 @@ body {
 
 .design-text {
   text-align: center;
-}
-
-.navbar-links {
-  color:#a06881;
+  color:#565264;
+  margin: 50px;
 }
 
 a {
@@ -57,7 +61,7 @@ a {
 }
 
 body {
-  background-color: white;
+  background-color: #f0f8ff;
 }
 
 .sign-in-image {
@@ -70,43 +74,62 @@ body {
 }
 
 .user-image {
-  border-radius: 50px;
-  width: 45px;
-  margin-bottom: 10px;
+  /* border-radius: 50%;
+  width: 25%; */
+  float:left;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: blue;
 }
 
 .form-btn {
-  background-color: #565264;
-  border: #565264;
+  background-color: #877fa5;
+  border: #877fa5;
+  color:white;
+}
+
+#piece-form-btn {
+  margin-top: 15px;
 }
 
 .cards {
-  padding: 10px 20px;
+  /* height: 100%; */
+  border-color: #877fa5;
+  background-color: transparent;
+  border-radius: 20px;
+  border-width: 3px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 15px;
-  height: 100%;
-  border-width: 5px;
-  border-radius: 30px;
+  justify-content: baseline;
+  float: none;
 }
 
-.navbar {
+.navbar-custom {
   padding: 14px 16px;
   margin: 10px;
   text-align: center;
+  background-color: #877fa5;
 }
 
 .rooms-btn, .pieces-btns {
-  background-color: #565264;
-  border-color: #565264;
+  background-color: #877fa5;
+  border-color: #877fa5;
   color: white;
-  border-radius: 10px;
+  align-content: space-evenly;
+  border-radius: 15px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 5px;
-  display: flex;
 }
 
 .rooms, .pieces {
   text-align: center;
+  color: #565264;
 }
 
 .piece-image {
@@ -121,4 +144,38 @@ body {
 .piecesContainer {
   display: flex;
   display: row;
+}
+
+.design-intro {
+  text-align: center;
+  color:#565264;
+}
+
+.room {
+  padding: 5px;
+  display: flex;
+}
+
+.purpose, .product-date {
+  margin: 10px;
+}
+
+h5 {
+  text-align: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-sign-out {
+  background-color:#877fa5;
+  color: white;
+}
+
+.form-select {
+  width: 30%;
 }

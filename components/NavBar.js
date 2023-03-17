@@ -11,25 +11,25 @@ import { signOut } from '../utils/auth';
 
 export default function NavBar() {
   return (
-    <Navbar className="navbar" expand="lg">
+    <Navbar className="navbar-custom" sticky="top">
       <Container>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Nav className="me-auto-navbar">
           <Link passHref href="/">
-            <Nav.Link className="navbar-links">What&#39;s your Style?</Nav.Link>
+            <Nav.Link className="navbar-links" style={{ color: 'white' }}>What&#39;s your Style?</Nav.Link>
           </Link>
         </Nav>
         <Nav className="me-auto-navbar">
           <Link passHref href="/rooms">
-            <Nav.Link className="navbar-links">Browse Rooms</Nav.Link>
+            <Nav.Link className="navbar-links" style={{ color: 'white' }}>Browse Rooms</Nav.Link>
           </Link>
         </Nav>
         <Nav className="me-auto-navbar">
           <Link passHref href="/pieces">
-            <Nav.Link className="navbar-links">Browse Pieces</Nav.Link>
+            <Nav.Link className="navbar-links" style={{ color: 'white' }}>Browse Pieces</Nav.Link>
           </Link>
         </Nav>
-        <NavDropdown className="nav-dropdown">
+        <NavDropdown className="nav-dropdown" style={{ color: 'white' }}>
           <Link passHref href="/">
             <NavDropdown.Item>What&#39;s your style?</NavDropdown.Item>
           </Link>

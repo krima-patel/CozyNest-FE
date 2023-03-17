@@ -29,7 +29,6 @@ const AuthProvider = (props) => {
     }),
     [oAuthUser],
   );
-  console.log(oAuthUser?.photoURL);
   useEffect(() => {
     firebase.auth().onAuthStateChanged((fbUser) => {
       if (fbUser) {
