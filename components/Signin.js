@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 // import { Button } from 'react-bootstrap';
@@ -14,10 +15,9 @@ function Signin() {
       }}
     >
       <img className="sign-in-image" width={270} style={{ margin: '0 auto' }} src="/./images/CozyNestLogo.png" />
-      <p style={{ margin: '5px' }}>Welcome to <b>Cozy Nest</b>! Cozy Nest is an application for those who love interior design and decor. If you are designing your home and have lots of ideas, find inspiration from literally anywhere and everywhere but become inundated with your design goals, you have come to the right place. Store your future design plans here for your space here by adding the rooms you want to design and the pieces to complete your room. Hold yourself accountable when designing to create your cozy nest.</p>
-      <h4>Click the button below to start designing!</h4>
+      <p style={{ margin: '5px' }} className="description">Welcome to <b style={{ color: 'rgb(85, 85, 85)' }}>Cozy Nest</b>! If you are designing your home and have lots of ideas, find inspiration from literally anywhere and everywhere and want to be THE designer of your home, but the process sounds daunting, then you have come to the right place! Store your future design plans here by adding the rooms you want to design and the pieces to complete your rooms. Hold yourself accountable when designing your cozy nest and visualize it through your design journey.</p>
       <button type="button" className="sign-in-btn" onClick={signIn}>
-        Sign In
+        Begin Designing
       </button>
     </div>
   );

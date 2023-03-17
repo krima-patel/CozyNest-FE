@@ -20,15 +20,16 @@ function RegisterForm({ user, updateUser }) {
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Your Name</Form.Label>
-        <Form.Control as="textarea" name="name" required placeholder="Enter your Name" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
-        <Form.Label>Design Bio</Form.Label>
-        <Form.Control as="textarea" name="bio" required placeholder="Enter your Design Bio" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
-        <Form.Text className="text-muted">Let other users know a little bit about you and your design style...</Form.Text>
-        <Form.Label>Add Your Profile Pic Here</Form.Label>
-        <Form.Control as="textarea" name="image" required placeholder="Add Your Profile Pic Here" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
+        <h1 style={{ textAlign: 'center' }}>Welcome to <b>Cozy Nest</b>! Begin Your Design Journey Here!</h1>
+        <h5 style={{ textAlign: 'left' }}>Thank you for wanting to join! Tell us a little about yourself so the Cozy Nest community can get to know you!</h5>
+        <Form.Label>Enter Your Username</Form.Label>
+        <Form.Control as="textarea" name="name" required placeholder="Your Username" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
+        <Form.Label>What&#39;s Your Design Style? Give us a little design bio. It does not have to be specific, your style is uniquely yours, so describe it as such.</Form.Label>
+        <Form.Control as="textarea" name="bio" required placeholder="Enter your Design Style/Bio" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
+        <Form.Label>Add Your Profile Picture Here</Form.Label>
+        <Form.Control as="textarea" name="image" required placeholder="Your Profile Picture Here" onChange={({ target }) => setFormData((prev) => ({ ...prev, [target.name]: target.value }))} />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="success" type="submit" className="form-btn">
         Submit
       </Button>
     </Form>

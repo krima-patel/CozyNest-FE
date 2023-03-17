@@ -28,18 +28,11 @@ export default function ViewRoom() {
 
   return (
     <div>
-      <h1 style={{ color: '#a06881', margin: '10px 20px' }}><b>Designing</b>: {roomData.name}</h1>
-      <h3 style={{ color: '#361d18', margin: '10px 20px' }}><b>Purpose of my room</b>: {roomData.purpose}</h3>
-      <h5 style={{ color: '#361d18', margin: ' 10px 20px' }}><b>Theme</b> I&#39;m going for:</h5>
-      <h6 style={{ margin: '10px 20px' }}>
-        {roomData.theme}
-      </h6>
-      <h6 style={{ margin: '10px 20px' }}>
-        The <b>ambience</b> I&#39;m trying to achieve for this room: {roomData.mood}
-      </h6>
-      <h6 style={{ margin: '10px 20px' }}>
-        Expected Completion Date for Room: {roomData.deadline}
-      </h6>
+      <h5 style={{ color: '#565264', textAlign: 'left' }}><b>Room I am Designing</b>: {roomData.name}</h5>
+      <h5 style={{ color: '#565264', textAlign: 'left' }}><b>Purpose of the Room</b>: {roomData.purpose}</h5>
+      <h5 style={{ color: '#565264', textAlign: 'left' }}><b>Theme of the Room</b>: {roomData.theme}</h5>
+      <h5 style={{ color: '#565264', textAlign: 'left' }}><b>The Room&#39;s Ambience</b>: {roomData.mood}</h5>
+      <h5 style={{ color: '#565264', textAlign: 'left' }}><b>Expected Completion Date for Room</b>: {roomData.deadline}</h5>
       <div className="piecesContainer">
         {piecesData?.map((piece) => (
           <PieceCard

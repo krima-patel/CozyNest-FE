@@ -24,16 +24,16 @@ export default function RoomCard({
   };
   return (
     <Card className="cards" style={{ width: '18rem' }}>
-      <Card.Body>
+      <Card.Body className="room-card-body">
         <img className="user-image" src={user?.image} alt={user.name} />
-        <h5 className="username"><b>{user.name}</b> is designing...</h5>
-        <Card.Title>{name}</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Purpose of Room: {purpose}</Card.Subtitle>
-        <Card.Subtitle className="product-date">Expected Completion date: {deadline}</Card.Subtitle>
+        <h5 className="username"><b>{user.name}</b> is designing</h5>
+        <Card.Title style={{ textAlign: 'center', color: '#565264' }}>{name}</Card.Title>
+        <Card.Subtitle className="purpose"><b style={{ color: '#565264' }}>Purpose of Room</b>: {purpose}</Card.Subtitle>
+        <Card.Subtitle className="product-date"><b style={{ color: '#565264' }}>Expected Completion Date</b>: {deadline}</Card.Subtitle>
         {userId === user?.uid ? (
           <>
             <Link href={`/rooms/${id}`} passHref>
-              <button type="button" className="rooms-btn">View More</button>
+              <button type="button" className="rooms-btn">View</button>
             </Link>
             <Link href={`/rooms/edit/${id}`} passHref>
               <button type="button" className="rooms-btn">Update</button>
