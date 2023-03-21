@@ -29,7 +29,6 @@ Cozy Nest is an interior design and decor application providing users structure 
  * Styles:
   * Authenticated users are able to select more than one interior design style when creating/sharing a piece. This was done by adding react-multi-select.
   
-
 * Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
 ## Begin Designing Your Own Cozy Nest!
