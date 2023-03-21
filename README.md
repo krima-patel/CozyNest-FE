@@ -21,10 +21,17 @@ Cozy Nest is an interior design and decor application providing users structure 
   * Authenticated users are able to create a piece they would like to share
   * Authenticated users are able to select one room they would like a piece to belong to. The room they select will be a room they have created, not a room created by another authenticated user.
   * Authenticated users are able to edit and delete pieces they have created and shared, but can only view pieces created by other authenticated users
+  
+ * Styles:
+  * Authenticated users are able to select more than one interior design style when creating/sharing a piece. This was done by adding react-multi-select.
+  
 
 * Users are able to sign out of the application via the "Sign Out" button on the nav bar
 
 ## Begin Designing Your Own Cozy Nest!
+
+![image](https://user-images.githubusercontent.com/102260648/226734908-87d233fa-a917-471d-bab4-3c5c2b90e16e.png)
+
 In order for the client side to work, you will need to run the server side API server/debugger. [Here](https://github.com/krima-patel/CozyNest-BE) is my server side repo. The server side API server/debugger must be running at the same time as the client side. Follow the instructions on the Cozy Nest server-side repo's README.md
 
 ### Run Frontend Locally
